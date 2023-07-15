@@ -5,6 +5,7 @@ from src.completed import completed
 from src.generator import generate_challenge
 from src.gsClient import getClient
 from src.join import join
+from src.leaderboard import leaderboard
 
 load_dotenv()
 
@@ -19,6 +20,7 @@ def main():
 
     dp.add_handler(CommandHandler("join", join))
     dp.add_handler(CommandHandler("completed", completed))
+    dp.add_handler(CommandHandler("leaderboard", leaderboard))
 
     updater.start_polling()
 
